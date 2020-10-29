@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profile.css';
-import User from '../User/User';
+import User from './User/User';
 import PropTypes from 'prop-types';
 const Profile = ({users}) => {
 

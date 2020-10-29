@@ -1,8 +1,7 @@
 import React from 'react';
 import './TransactionHistory.css';
-import transactions from '../../db/transactions.json';
-import SingleTransaction from '../SingleTransaction/SingleTransaction';
-const TransactionHistory = () => {
+import SingleTransaction from './SingleTransaction/SingleTransaction';
+const TransactionHistory = ({transactions}) => {
     return (
         <table class="transaction-history">
             <thead>
@@ -13,7 +12,7 @@ const TransactionHistory = () => {
                 </tr>
             </thead>
             <tbody >
-                {transactions.map((transaction) => <SingleTransaction key={transaction.id} value={transaction} />)}
+                {transactions.map((obj) => <SingleTransaction key={obj.id} value={obj} />)}
             </tbody>
         </table>
     );

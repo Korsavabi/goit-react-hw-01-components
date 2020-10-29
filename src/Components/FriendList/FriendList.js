@@ -1,9 +1,8 @@
 import React from 'react';
 import './FriendList.css';
-import SingleFriend from './../SingleFriend/SingleFriend';
-import friends from './../../db/friends.json';
+import SingleFriend from './SingleFriend/SingleFriend';
 
-const FriendList = () => {
+const FriendList = ({friends}) => {
     return (
         <ul className="friend-list">
             {/* <!-- Произвольное кол-во FriendListItem, в зависимости от кол-ва объектов в массиве --> */}
