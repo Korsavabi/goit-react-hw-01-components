@@ -1,5 +1,7 @@
 import React from 'react';
 import './SingleStatistic.css';
+import PropTypes from 'prop-types';
+
 
 const SingleStatistic = ({value}) => {
     return (
@@ -13,3 +15,8 @@ const SingleStatistic = ({value}) => {
 };
 
 export default SingleStatistic;
+
+SingleStatistic.propTypes ={
+    label: PropTypes.string,
+    percentage: PropTypes.number
+}

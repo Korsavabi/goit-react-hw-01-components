@@ -1,22 +1,23 @@
 import React from 'react';
 import './User.css';
-import SingleUser from '../SingleUser/SingleUser';
-const User = ({users}) => {
+import PropTypes from 'prop-types';
 
+
+const User = ({ stat:[key,value] }) => {
+    console.log();
     return (
-        
-        <div className="profile">
-             <div className="description">
-                <img src={users.avatar} alt="user avatar" className="avatar" />
-                <p className="name">{users.name}</p>
-                <p className="tag">@{users.tag}</p>
-                <p className="location">{users.location}</p>
-            </div>
-            <ul className="stats">
-            {Object.entries(users.stats).map(stat => <SingleUser key={stat} stat={stat} />)}
-            </ul>
-        </div>
+        <>
+            <li className="stats-item">
+                <span className="label">{key}</span>
+                <span className="quantity">{value}</span>
+            </li>
+        </>
     );
 };
 
 export default User;
+
+User.propTypes ={
+    key: PropTypes.string,
+    value: PropTypes.number
+}
