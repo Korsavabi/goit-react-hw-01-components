@@ -1,5 +1,7 @@
 import React from 'react';
 import './SingleTransaction.css';
+import PropTypes from 'prop-types';
+
 
 const SingleTransaction = ({ value }) => {
     return (
@@ -12,3 +14,8 @@ const SingleTransaction = ({ value }) => {
 };
 
 export default SingleTransaction;
+SingleTransaction.propTypes = {
+    type: PropTypes.string,
+    amount: PropTypes.string,
+    currency: PropTypes.string,
+  };

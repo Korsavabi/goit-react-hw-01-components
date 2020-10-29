@@ -1,5 +1,6 @@
 import React from 'react';
 import './SingleFriend.css';
+import PropTypes from 'prop-types';
 
 const SingleFriend = ({ value }) => {
     return (
@@ -12,3 +13,9 @@ const SingleFriend = ({ value }) => {
 };
 
 export default SingleFriend;
+
+SingleFriend.propTypes = {
+    avatar: PropTypes.string,
+    isOnline: PropTypes.bool,
+    name: PropTypes.string,
+  };
