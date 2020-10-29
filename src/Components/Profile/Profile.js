@@ -23,5 +23,7 @@ const Profile = ({users}) => {
 export default Profile;
 
 Profile.propTypes ={
-    users: PropTypes.string
+    name: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string
 }

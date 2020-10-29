@@ -1,5 +1,6 @@
 import React from 'react';
 import './FriendList.css';
+import PropTypes from 'prop-types';
 import SingleFriend from './SingleFriend/SingleFriend';
 
 const FriendList = ({friends}) => {
@@ -12,3 +13,7 @@ const FriendList = ({friends}) => {
 };
 
 export default FriendList;
+
+FriendList.propTypes ={
+    id: PropTypes.number,
+}
